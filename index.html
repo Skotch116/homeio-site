@@ -17,18 +17,61 @@
   .tag { color: var(--dim); margin: 0 0 1.5rem; }
   a { color: var(--accent); }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.25rem; }
+  ul { padding-left: 1.2rem; } li { margin: .3rem 0; }
+  pre { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.25rem; white-space: pre-wrap; font: 15px/1.5 ui-monospace, Menlo, monospace; }
+  button { font: inherit; font-size: .95rem; padding: .45rem .9rem; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--accent); cursor: pointer; }
   footer { margin-top: 3rem; color: var(--dim); font-size: .95rem; }
 </style>
 </head>
 <body>
 <main>
   <h1>Home.io</h1>
-  <p class="tag">Your home in 3D, live &middot; for iPhone, iPad, Mac and Apple Watch</p>
+  <p class="tag">Your home in 3D, live &middot; for iPhone, iPad and Mac</p>
 
   <div class="card">
     <p style="margin:0">Home.io puts your Apple Home and Home Assistant accessories on a 3D model of your own house.
     See which lights are on, which doors are open and how warm each room is at a glance, and tap anything to control it.</p>
   </div>
+
+
+  <h2>What it does</h2>
+  <ul>
+    <li><strong>Your house in 3D or as a plan</strong>, with every light, lock, door, sensor, camera and appliance where it really is. Tap to control it.</li>
+    <li><strong>Tiles</strong>: dashboards you arrange yourself, with accessories, scenes, rooms, cameras, the weather, security, energy and timers.</li>
+    <li><strong>An idle screen</strong> for an iPad on the wall: the house or a dashboard, the time, weather, what's playing, and severe weather alerts. It can wake when someone walks up.</li>
+    <li><strong>Schedules</strong> at a time, at sunrise or sunset, or when a door opens, saved in Apple Home or Home Assistant. With Pro: only at night, only when someone's home, only if a door is closed, and back off again after a while.</li>
+    <li><strong>Energy, Device Health and History</strong>: electricity use and cost, low batteries and accessories that stopped answering, and temperature, humidity and battery charts.</li>
+    <li><strong>Real weather on the model</strong>: the sun where it really is, rain, snow that builds up on the roof, trees that bend in a storm, and lightning.</li>
+    <li><strong>Backups</strong> of your plans, settings and your Apple Home setup (rooms, names, scenes, automations), automatically every week to iCloud Drive.</li>
+  </ul>
+
+  <h2>Free and Pro</h2>
+  <p>Home.io is free to download, with one floor plan of your own (drawn, from photos, scanned or imported) with one
+  floor, Tiles with one dashboard, schedules, and everything for controlling and watching your home. <strong>Home.io Pro</strong>
+  is a single purchase, no subscription, shared with your family: every floor and any number of plans, the model editor,
+  Replay, cameras on the model, smarter automations, more dashboards, History, and restoring Apple Home from a backup.</p>
+
+  <h2>Make a 3D model of your house with AI</h2>
+  <p>You can have Claude (or another AI assistant) make a model of your house for Home.io:</p>
+  <ol>
+    <li>Copy the prompt below and paste it into Claude, with a photo of your floor plan if you have one.</li>
+    <li>Answer its questions. It writes a script that builds your house.</li>
+    <li>On a Mac or PC, install <a href="https://www.blender.org">Blender</a> (free). Open it, choose the Scripting tab, click New, paste the script and click Run Script. <em>MyHouse.usdz</em> appears on your Desktop.</li>
+    <li>Put the file in iCloud Drive (or AirDrop it), then in Home.io open Floor Plans and tap Import 3D Model.</li>
+  </ol>
+  <p><button onclick="navigator.clipboard.writeText(document.getElementById('prompt').innerText).then(()=>this.textContent='Copied')">Copy the prompt</button></p>
+  <pre id="prompt">I&#x27;d like a 3D model of my house for the Home.io app, which shows my smart home on a 3D model of the house. Please write one Python script for Blender (version 4 or newer) that builds the house and saves it as a USDZ file.
+
+What the model needs:
+• Real size, in metres. The ground floor&#x27;s floor surface at height 0, each floor above about 3 m higher (measured to its floor surface), and a basement&#x27;s floor about 2.7 m below.
+• On each floor: a floor slab under every room, outside walls about 0.15 m thick and inside walls about 0.1 m, about 2.6 m high, with door openings (about 0.9 × 2.1 m) cut through the walls, stairs where they are, and windows as openings with a thin pane of glass.
+• No ceilings, so each floor can be seen from above. The floor of the storey above sits on the walls below.
+• A roof over the top floor in my house&#x27;s shape, with eaves about 0.3 m past the walls.
+• Porches, decks and a garage if I have them. No furniture, lights, cameras, trees, ground or lawn: Home.io adds its own.
+• Simple materials named for what they are: &quot;Outside walls&quot;, &quot;Roof&quot;, &quot;Floors&quot;, &quot;Inside walls&quot;, &quot;Trim&quot;, &quot;Glass&quot;.
+• At the end, select everything and export it with bpy.ops.wm.usd_export to a file called MyHouse.usdz on my Desktop.
+
+Before you write the script, ask me for what you need: how many floors, each room&#x27;s name, size and place, where the doors, windows and stairs are, the roof&#x27;s shape, and which side the front door is on. I can give you a photo or sketch of my floor plan, a listing&#x27;s floor plan, or measurements.</pre>
 
   <h2>Support</h2>
   <p>Questions, problems or ideas? Write to <a href="mailto:jibjabsmash@gmail.com">jibjabsmash@gmail.com</a> and
@@ -41,6 +84,16 @@
   Home Assistant, and paste a long-lived access token (Home Assistant &rarr; your profile &rarr; Security).</p>
   <p><strong>Can I control Home Assistant away from home?</strong> Yes. Leave an iPad at home with Home.io open and
   turn on Use This iPad as the Home Hub. Your iPhone then works through your own iCloud, with no network setup.</p>
+  <p><strong>How do I make a dashboard?</strong> Choose Tiles at the top (next to 3D and Plan) and tap Make One for Me,
+  or Start Empty and add your own tiles. Edit lets you add, remove, resize and drag tiles.</p>
+  <p><strong>How do I use an iPad on the wall?</strong> In Settings, turn on Wall Mount Mode and choose when the idle
+  screen comes on and what it shows (the house, one of your saved views, or a dashboard).</p>
+  <p><strong>Why is the history empty for an Apple Home sensor?</strong> Apple Home keeps no history, so Home.io keeps
+  the readings itself while it's open. An iPad left on as a home hub collects the most. Home Assistant sensors show
+  Home Assistant's own history.</p>
+  <p><strong>Can lightning on the model follow real strikes?</strong> Yes, if Home Assistant has a lightning sensor: the
+  free Blitzortung integration, or a weather station with a lightning detector. Otherwise it flashes during
+  thunderstorms reported by Apple Weather.</p>
   <p><strong>Restoring Home.io Pro.</strong> Open any Pro feature and tap Restore Purchase.</p>
 
   <p><a href="privacy.html">Privacy Policy</a></p>
