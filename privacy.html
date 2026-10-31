@@ -37,9 +37,11 @@
 
   <h2>Floor plans, settings and the home hub</h2>
   <p>Your floor plans, furniture, views and settings are saved on your device and synced between your own devices with
-  Apple's iCloud, in your private iCloud storage. If you turn on the home hub, an iPad at home shares your Home
-  Assistant accessories and their states with your other devices through the same private iCloud storage, so you can
-  control them away from home. Apple holds this data for you under
+  Apple's iCloud, in your private iCloud storage. If you turn on the home hub, one of your devices at home (an iPad,
+  Mac, iPhone or Apple TV) runs your workflows and shares your Home Assistant accessories, their states and what your
+  workflows have done with your other devices through the same private iCloud storage, so you can control them away
+  from home. If you set a garage PIN and use Home.io on an Apple TV, your iPhone or iPad puts a hash of the PIN (never
+  the PIN itself) in that storage so the TV can check the code you enter. Apple holds this data for you under
   <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>; we cannot read it.</p>
 
   <h2>Readings, backups and the camera on a wall iPad</h2>
@@ -59,8 +61,9 @@
   alerts and recent snowfall on your model. For a home in the United States these come from the National Weather Service
   (api.weather.gov), which is sent your home's approximate position (to about a kilometre) while Home.io is open, about
   every 10 to 15 minutes. For a home anywhere else they come from Apple Weather. When you ask it to landscape your yard from an aerial photo, it sends the
-  coordinates of your home to public map services (Microsoft Planetary Computer for the aerial photo, and
-  OpenStreetMap's Overpass service for the outline of the buildings) to fetch the images and outlines for that spot.
+  coordinates of your home to public map services to fetch the images and outlines for that spot: for the aerial photo,
+  Microsoft Planetary Computer in the United States, basemap.at in Austria, PDOK in the Netherlands and swisstopo in
+  Switzerland; and for the outline of the buildings, OpenStreetMap's Overpass service.
   These requests are made only when you use those features and carry no information about you besides the place.</p>
 
   <h2>Microphone and speech</h2>
