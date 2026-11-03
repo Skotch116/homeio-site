@@ -23,7 +23,7 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="tag">Home.io &middot; last updated October 2026</p>
+  <p class="tag">Home.io &middot; last updated November 2026</p>
 
   <div class="card">
     <p style="margin:0"><strong>In short:</strong> Home.io collects no personal data. Your home, your floor plans and
@@ -35,13 +35,39 @@
   their names, rooms and states and sends your commands to them directly from your device. None of this is sent to us.
   A Home Assistant address and access token you enter are kept on that device only (the token in its keychain).</p>
 
+  <h2>UniFi cameras and doors</h2>
+  <p>If you connect a UniFi console, Home.io talks to it directly at the address you enter, normally on your home
+  network. It reads your Protect cameras (their names, whether they're online, doorbell rings, and person, vehicle,
+  animal and package detections) and your Access doors (whether each is locked and whether it's open). It shows the
+  cameras' still pictures, and sends an unlock only after your PIN, Face ID or Touch ID. Pictures, rings, detections
+  and unlocks go only between your device and your console, never through us or the home hub.</p>
+  <p>The API key and token you enter are kept only in that device's keychain: they are never synced to your other
+  devices or put in Home.io's backups. The console's address, the security certificate you confirm and the list of
+  your cameras and doors stay on that device too, and aren't in Home.io's backups, though your device's own iCloud or
+  computer backup can include the address and the list. If you put a UniFi camera or door on your floor plan, hide it
+  or change its icon, its name and room go with your plan, which syncs through your own iCloud like your other
+  accessories.</p>
+
+  <h2>Your speakers</h2>
+  <p>Apple Home doesn't share HomePods and other AirPlay speakers with apps, so to show them Home.io asks the Wi-Fi
+  network your device is on which AirPlay speakers are there. It starts after you first open Music (or right away if
+  you use Home Assistant or UniFi), and that first search is when iOS asks you for Local Network access. Home.io uses
+  only each speaker's name and model, keeps the list in memory without saving it, and doesn't connect to your speakers
+  or send them commands: tapping one opens Music, and you choose where the music plays with Apple's AirPlay. If you
+  place a speaker on your floor plan, hide it or pick its icon, its name and room are saved with your plans like your
+  other accessories.</p>
+
   <h2>Floor plans, settings and the home hub</h2>
   <p>Your floor plans, furniture, views and settings are saved on your device and synced between your own devices with
   Apple's iCloud, in your private iCloud storage. If you turn on the home hub, one of your devices at home (an iPad,
   Mac, iPhone or Apple TV) runs your workflows and shares your Home Assistant accessories, their states and what your
   workflows have done with your other devices through the same private iCloud storage, so you can control them away
-  from home. If you set a garage PIN and use Home.io on an Apple TV, your iPhone or iPad puts a hash of the PIN (never
-  the PIN itself) in that storage so the TV can check the code you enter. Apple holds this data for you under
+  from home. If you turn on Home Alerts, the home hub puts a short note about what happened, such as a doorbell ring or
+  your alarm going off with the accessory's name and room, in that storage so your other devices can notify you, and
+  clears each note after a day. The PIN Home.io asks for before it unlocks a door, turns off your alarm or opens the
+  garage is kept in that device's keychain, and each iPhone or iPad sets its own. If you use Home.io on an Apple TV,
+  your iPhone or iPad puts a hash of the PIN (never the PIN itself) in that storage so the TV can check the code you
+  enter. Apple holds this data for you under
   <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>; we cannot read it.</p>
 
   <h2>Readings, backups and the camera on a wall iPad</h2>
@@ -50,7 +76,9 @@
   setup, and are saved where you choose or in your own iCloud Drive. If you turn on Wake When Someone Walks Up or Sleep
   When No One's There, the iPad's front camera looks for a face on the device itself: nothing is recorded, kept or
   sent anywhere, and a green dot shows while it's watching. Tell Home Assistant When Someone's There sends only
-  "someone there" or "no one there" to your own Home Assistant server.</p>
+  "someone there" or "no one there" to your own Home Assistant server. A LiDAR scan keeps a report of how it went, with
+  the shapes and sizes of your rooms but no photos, on your device only and out of backups; it's sent only if you tap
+  Send Scan Report and choose where it goes.</p>
 
   <h2>AI</h2>
   <p>Home.io does not send anything to an AI service. The "Make a 3D Model with AI" prompt is text for you to copy into
