@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home.io: Scan your house with LiDAR</title>
+<meta name="description" content="How to scan your house room by room with LiDAR in Home.io, and what to do when a scan goes wrong.">
+<style>
+  :root { color-scheme: light dark; --bg: #f6f8fb; --ink: #14202e; --dim: #4a5b6e; --accent: #0b5cad; --card: #ffffff; --line: #d5dde7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b1420; --ink: #e8eef5; --dim: #9fb1c4; --accent: #6db4ff; --card: #122033; --line: #243750; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 2rem; margin: 0 0 .25rem; line-height: 1.2; }
+  h2 { font-size: 1.3rem; margin: 2.2rem 0 .5rem; }
+  .tag { color: var(--dim); margin: 0 0 1.5rem; }
+  a { color: var(--accent); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.25rem; }
+  ul, ol { padding-left: 1.2rem; } li { margin: .4rem 0; }
+  .new { color: var(--dim); font-size: .9rem; }
+  footer { margin-top: 3rem; color: var(--dim); font-size: .95rem; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">&larr; Home.io Support</a></p>
+  <h1>Scan your house with LiDAR</h1>
+  <p class="tag">Walk through room by room and Home.io finds the walls, doors and windows for you</p>
+
+  <div class="card">
+    <p style="margin:0"><strong>The short version:</strong> lights on, doors open, one room at a time, move slowly,
+    and tap <strong>Next Room</strong> while you stand in the doorway. Do a few rooms per sitting, not the whole house.</p>
+  </div>
+
+  <h2>What you need</h2>
+  <ul>
+    <li><strong>An iPhone or iPad with LiDAR:</strong> an iPhone Pro or Pro Max (12 Pro or newer), or an iPad Pro from 2020
+    or newer. On other devices Home.io doesn't offer scanning; you can draw the rooms or import a model there.</li>
+    <li><strong>A charged device.</strong> Scanning works the phone hard and it gets warm.</li>
+    <li><strong>You only scan once.</strong> The plan syncs to your other devices through iCloud, so borrow a Pro phone
+    for the scan if yours has no LiDAR.</li>
+  </ul>
+
+  <h2>Before you start</h2>
+  <ul>
+    <li><strong>Turn the lights on</strong> and open the curtains. The scanner loses its place in a dim room.</li>
+    <li><strong>Open the doors between rooms</strong> so the doorways are found.</li>
+    <li><strong>Clear the floor along the walls</strong> where you can. Walls hidden behind piles of things come out crooked.</li>
+    <li><strong>Plan your route.</strong> Start in one room and work outward to the rooms next to it.</li>
+  </ul>
+
+  <h2>Scan the first rooms</h2>
+  <ol>
+    <li>Open <strong>Floor Plans</strong> and tap <strong>Scan Rooms with LiDAR</strong>.</li>
+    <li>Stand in the first room and point the camera at a wall. Turn slowly on the spot, then walk the edge of the room.
+    Tilt down to catch where the walls meet the floor and up to where they meet the ceiling. White lines appear as each
+    wall, door and window is found.</li>
+    <li>When the room's outline has closed, walk to the doorway of the next room and tap <strong>Next Room</strong>.
+    Home.io saves the room you finished, so a problem later costs you one room, not the house.</li>
+    <li>Scan the next room the same way. The line at the bottom keeps count: "2 Rooms saved."</li>
+    <li>Tap <strong>Done</strong> after the last room. Home.io puts the rooms together and opens your new plan.</li>
+  </ol>
+  <p>Keep Home.io on screen the whole time. Switching to another app or locking the phone stops the scan.</p>
+
+  <h2>How much to scan at once</h2>
+  <p>Apple's scanner is built for a room or a few, about 2,000 square feet (190 m&sup2;) at most in one go. Past that it
+  can run out of room or the phone can overheat. For a big house, stop after a few rooms and come back for the rest.</p>
+  <p><strong>Scan More Rooms</strong> <span class="new">(Home.io 1.0.9 and later)</span> adds another sitting to the plan
+  you already have. It's in Floor Plans and in the plan's menu in the sidebar. You pick the floor the new rooms belong
+  on, or a new level above or below, then tap <strong>Start Scanning</strong>. Adding to a floor you have is free; a new
+  level is part of Home.io Pro.</p>
+  <p>Each sitting is set down beside the rooms already there, so nothing has to line up while you scan. To put a
+  sitting where it really is, switch to <strong>Plan</strong>, tap <strong>Move Scan</strong>, then drag it into place and turn it.</p>
+
+  <h2>More than one story</h2>
+  <p><span class="new">Home.io 1.0.9 and later.</span> If you keep scanning up or down the stairs, each story comes out
+  as its own floor, and the one you started on is the 1st Floor. Without Pro, the floor you started on is the one you
+  get. For a big house, one story per sitting with Scan More Rooms is the safer way.</p>
+
+  <h2>After the scan</h2>
+  <ul>
+    <li><strong>Match Rooms</strong> lines up the scanned rooms with your rooms in Apple Home or Home Assistant, so your
+    accessories land in the right place. Rooms are matched by name where the names agree.</li>
+    <li><strong>Rooms open to each other</strong>, like a kitchen and dining room with no wall between, come out as one
+    room named for both. In Match Rooms &rsaquo; Rooms on the Model, <strong>Join</strong> merges two rooms yourself.</li>
+    <li><strong>Edit Model</strong> is where you rename rooms, set levels, paint and add furniture.</li>
+  </ul>
+
+  <h2>When a scan goes wrong</h2>
+  <p>Home.io tells you why it stopped and keeps the rooms you had finished. Tap the <strong>Use Rooms</strong> button (it shows how many, like "Use 3 Rooms") to keep them,
+  or <strong>Scan Again</strong> to redo the room that failed.</p>
+  <ul>
+    <li><strong>"Your device lost track of where it was."</strong> It was too dark, you moved too fast, or the camera
+    faced a blank wall or a window for too long. Lights on, slow down, and keep some furniture or corners in view.</li>
+    <li><strong>"That was too much for one scan."</strong> Finish with what you have, then add the rest with Scan More
+    Rooms, a smaller area at a time.</li>
+    <li><strong>"Your device got too hot."</strong> Let it cool for a few minutes, out of its case if it has one.</li>
+    <li><strong>"The scan stopped when you left Home.io."</strong> Keep the app on screen until you tap Done.</li>
+    <li><strong>A wall, door or window is missing or crooked.</strong> Mirrors, glass doors and very dark walls confuse
+    the scanner. Rescan that room slowly, or fix it afterward in Edit Model.</li>
+  </ul>
+
+  <h2>Send a scan report</h2>
+  <p>If a scan keeps failing or comes out wrong, open Floor Plans and tap <strong>Send Scan Report</strong>. It shares a
+  small file that says how your last scan went and the shapes of its rooms. It has no photos. Send it to
+  <a href="mailto:jibjabsmash@gmail.com">jibjabsmash@gmail.com</a> with a line about what looked wrong, and it gets fixed from that.</p>
+
+  <h2>No LiDAR, or it just won't scan?</h2>
+  <p>You can still get your house in. In Floor Plans, <strong>Draw a Floor Plan</strong> lets you trace each room on a
+  grid, or you can import a Sweet Home 3D file or a 3D model. The <a href="index.html">support page</a> shows how to
+  have an AI assistant build a model from your floor plan.</p>
+
+  <footer>&copy; 2026 Steven Koch</footer>
+</main>
+</body>
+</html>
